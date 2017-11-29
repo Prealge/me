@@ -6,6 +6,8 @@
 <br><br><br>
 
 <center>
+  <input type="text" class="form-control" id="textin"></input>
+  
   <button onclick="speakText()" class="btn btn-primary">Read</button>
 </center>
 
@@ -13,7 +15,12 @@
   
   var text = prompt("Text");
   
+  function setText() {
+     text = document.getElementById("textin").value;           
+  }
+  
   function speakText() {
+    setText();
     responsiveVoice.speak(text);
   }
   
