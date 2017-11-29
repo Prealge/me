@@ -2,12 +2,19 @@
 
 <script src='https://code.responsivevoice.org/responsivevoice.js'></script>
 
-<script>
-var essay = 'ti';
-</script>
 
 <br><br><br>
 
 <center>
-  <button onclick="responsiveVoice.speak(essay)" class="btn btn-primary">Read</button>
+  <button onclick="speakText()" class="btn btn-primary">Read</button>
 </center>
+
+<script>
+  
+  var text = prompt("Text");
+  
+  function speakText() {
+    responsiveVoice.speak(text);
+  }
+  
+</script>
